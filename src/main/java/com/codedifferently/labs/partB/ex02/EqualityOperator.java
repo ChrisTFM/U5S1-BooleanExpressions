@@ -7,7 +7,12 @@ public class EqualityOperator {
         String num2 = "5";
 
         /* Your code goes here*/
-
+        if (Integer.valueOf(num1) == Integer.valueOf(num2)) {
+            response = "Are "+ num1 +" and "+ num2 +" equal? true";
+        }
+        else {
+            response = "Are "+ num1 +" and "+ num2 +" equal? false";
+        }
 
         return response;
     }
