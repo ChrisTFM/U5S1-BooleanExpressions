@@ -2,6 +2,10 @@ package com.codedifferently.labs.partC;
 
 public class AlgoChallenge {
 
+    public static void main(String[] args){
+        System.out.println(startWithIx("Risk")); //Mix
+        System.out.println(near10(10, 10));
+    }
       /* Problem 1
     Your local rapper is looking to create his next hook for his next track. He wants to add phrases that begin with "mix".
     But he decides he wants to take it a step further and accept any phrase except the "m" can be any letter or number.
@@ -13,8 +17,13 @@ public class AlgoChallenge {
      */
 
     public static Boolean startWithIx(String phrase) {
+        Boolean response = false;
 
-        return null;
+        if (phrase.contains("ix")) {response = true;}
+        else {response = false;}
+        //System.out.println(phrase.indexOf("ix"));
+
+        return response;
     }
 
      /* Problem 1
@@ -30,7 +39,20 @@ public class AlgoChallenge {
 
     public static Integer near10(int one, int two){
 
-        return null;
+        int one_sum = one - 10;
+        int two_sum = two - 10;
+        if (one_sum < 0) {one_sum = one_sum * -1;}
+        if (two_sum < 0) {one_sum = one_sum * -1;}
+
+        //System.out.println(one_sum);
+        //System.out.println(two_sum);
+
+        if (one_sum == two_sum) {return 0;}
+        else if (one_sum < two_sum) {return one;}
+        else {return two;}
+
+
+
     }
 
 }
